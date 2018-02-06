@@ -1,5 +1,6 @@
 package com.wolf.movie;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.content.Context;
 import android.os.Bundle;
@@ -13,11 +14,13 @@ import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.reactivex.functions.Consumer;
 
 public class SplashActivity extends AppCompatActivity {
     private Context mContext;
@@ -42,8 +45,18 @@ public class SplashActivity extends AppCompatActivity {
         YoYo.with(Techniques.RotateInDownRight).onEnd(new YoYo.AnimatorCallback() {
             @Override
             public void call(Animator animator) {
-                LogUtils.i("加载完成");
+                initPermissions();
             }
         }).duration(1200).repeat(0).playOn(logoImage);
+    }
+    private void initPermissions(){
+        RxPermissions rxPermissions = new RxPermissions(this);
+        rxPermissions.request(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE).subscribe(new Consumer<Boolean>() {
+            @Override
+            public void accept(Boolean aBoolean) throws Exception {
+                  LogUtils.i("start");
+            }
+        });
+
     }
 }

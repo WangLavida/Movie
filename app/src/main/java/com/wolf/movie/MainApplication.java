@@ -18,15 +18,15 @@ public class MainApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
-
+        initUtils();
     }
-    private void initLog(){
+    private void initUtils(){
         Utils.init(this);
         LogUtils.Config config = LogUtils.getConfig();
         config.setLogSwitch(Constants.isDebug);
         config.setLog2FileSwitch(Constants.isDebug);
-        config.setDir(getExternalFilesDir(null));
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        config.setDir(getExternalFilesDir(null)+Constants.LOG_PATH);
+        SimpleDateFormat df = new SimpleDateFormat("yyyy");
         config.setFilePrefix(df.format(new Date()));
     }
 }
