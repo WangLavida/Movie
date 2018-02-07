@@ -5,4 +5,6 @@
     <color name="colorAccent">#66bb6a</color>
 
     <color name="color_main">#43a047</color>
+    <color name="color_spl_count_down_bg">#88000000</color>
+    <color name="color_white">#ffffff</color>
 </resources>

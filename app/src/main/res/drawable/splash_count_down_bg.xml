@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+   <corners
+       android:topLeftRadius="@dimen/splash_count_radius"
+       android:topRightRadius="@dimen/splash_count_radius"
+       android:bottomLeftRadius="@dimen/splash_count_radius"
+       android:bottomRightRadius="@dimen/splash_count_radius"/>
+    <padding
+        android:top="@dimen/splash_count_padding"
+        android:bottom="@dimen/splash_count_padding"
+        android:left="@dimen/splash_count_padding"
+        android:right="@dimen/splash_count_padding"/>
+    <solid
+        android:color="@color/color_spl_count_down_bg"/>
+</shape>

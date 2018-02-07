@@ -7,4 +7,5 @@ package com.wolf.movie.common;
 public class Constants {
     public static final boolean isDebug = true;
     public static final String LOG_PATH = "/log";
+    public static final int SPL_TIME = 3;
 }
