@@ -7,6 +7,8 @@
 - [AndroidUtilCode](https://github.com/Blankj/AndroidUtilCode)
 - [RxAndroid](https://github.com/ReactiveX/RxAndroid)
 - [RxPermissions](https://github.com/tbruyelle/RxPermissions)
+- [PageIndicatorView](https://github.com/romandanylyk/PageIndicatorView)
+- [ViewPagerTransforms](https://github.com/ToxicBakery/ViewPagerTransforms)
 
 ###Android Butterknife 8.4.0 使用方法
 1. 在项目的project 的build.gredle 文件中的dependencies标签下添加。(3.0不需要)
