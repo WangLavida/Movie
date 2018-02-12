@@ -20,6 +20,7 @@ import com.daimajia.androidanimations.library.YoYo;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.wolf.movie.common.Constants;
 import com.wolf.movie.ui.activity.GuideActivity;
+import com.wolf.movie.ui.activity.MainActivity;
 import com.wolf.movie.util.MyLog;
 
 import java.util.Random;
@@ -124,7 +125,7 @@ public class SplashActivity extends AppCompatActivity {
         startMain();
     }
     private void startMain(){
-        startActivity(new Intent(mContext, GuideActivity.class));
+        startActivity(new Intent(mContext, MainActivity.class));
         finish();
     }
 
